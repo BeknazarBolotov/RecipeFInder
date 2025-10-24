@@ -1,68 +1,147 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
 body {
   margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #fffaf5;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Navbar */
+.navbar {
   display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff7043;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+.navbar input {
+  padding: 0.6rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  width: 220px;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(255, 112, 67, 0.6), rgba(255, 112, 67, 0.8));
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero h2 {
+  font-size: 2.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.1rem;
+}
+
+/* Form */
+.form {
+  margin: 2rem auto;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  padding: 10px;
+  width: 200px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.form button {
+  background-color: #ff7043;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
   cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  transition: 0.3s;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.form button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
+
+/* Recipe List */
+.recipe-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+/* Recipe Card */
+.recipe-card {
+  background: white;
+  border-radius: 12px;
+  width: 260px;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.recipe-card h2 {
+  color: #333;
+  margin: 0 0 10px;
+}
+
+.recipe-card p {
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
+.actions button {
+  margin: 0 5px;
+  border: none;
+  padding: 7px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.actions button:first-child {
+  background-color: #4caf50;
+  color: white;
+}
+
+.actions button:last-child {
+  background-color: #f44336;
+  color: white;
+}
+
+.actions button:hover {
+  opacity: 0.8;
+}
+
+.no-results {
+  color: #888;
+  margin-top: 30px;
+  font-size: 1.2rem;
 }
